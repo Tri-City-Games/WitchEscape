@@ -3,6 +3,7 @@ package com.game.pier;
 import java.util.Scanner;
 
 import static com.game.pier.Boardwalk.*;
+import static com.game.pier.Pier.*;
 
 //add an array of all locations and start removing them based on user's choice
 
@@ -20,6 +21,8 @@ public class Pier_Gameplay {
             sailor_group();
         } else if (choice == "ale house") {
             ale_House();
+        } else if (choice == "pier"){
+                boat_encounters();
         } else {
             System.out.println("Sorry! You can't go there.");
         }
