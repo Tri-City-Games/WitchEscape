@@ -6,9 +6,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 
+import com.game.house.*;
+
 public class GameClass {
     // This is a placeholder for now.
-    private String currentLocation= "House"; // This could be an ENUM
+    private String currentLocation= "com.game.house.House"; // This could be an ENUM
     private ArrayList<String> itemsInRoom = new ArrayList<String>(Arrays.asList("frying pan", "rock", "bread"));
     private ArrayList<String> inventory = new ArrayList<String>(5);
     private int health = 5;
@@ -22,7 +24,7 @@ public class GameClass {
         banner();
         wantInstructions();
         intro();
-        // print house stuff here
+        House.play();
         // run Sohail's code
         // run Laura's code
     }
