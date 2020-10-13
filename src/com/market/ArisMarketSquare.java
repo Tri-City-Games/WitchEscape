@@ -99,16 +99,29 @@ while (true) {
                 "Enter 4 for " + marketList.get(4));
 //        System.out.println(marketList);
 
-        Scanner itemInput = new Scanner(System.in);
-        int response2 = itemInput.nextInt();
-        System.out.println(response2);
+    //prompt  to grab another item
+while (true) {
+    Scanner itemInput = new Scanner(System.in);
+    int response2 = itemInput.nextInt();
+    System.out.println(response2);
 //can call from list using index later can code this
-        if (response2 == 0) {System.out.println("you now have" + marketList.get(0) + " in your bag");}
-        else if (response2 == 1)  {System.out.println("you now have" + marketList.get(1) + " in your bag");}
-        else if (response2 == 2) {System.out.println("you now have" + marketList.get(2) + " in your bag");}
-        else if (response2 == 3) {System.out.println("you now have" + marketList.get(3) + " in your bag");}
-        else if (response2 == 4)  {System.out.println("you now have" + marketList.get(4) + " in your bag");}
-
+    if (response2 == 0) {
+        System.out.println("you now have" + marketList.get(0) + " in your bag");
+    } else if (response2 == 1) {
+        System.out.println("you now have" + marketList.get(1) + " in your bag");
+        break;
+    } else if (response2 == 2) {
+        System.out.println("you now have" + marketList.get(2) + " in your bag");
+        break;
+    } else if (response2 == 3) {
+        System.out.println("you now have" + marketList.get(3) + " in your bag");
+        break;
+    } else if (response2 == 4) {
+        System.out.println("you now have" + marketList.get(4) + " in your bag");
+        break;
+    }else
+        break;
+}
 
 // worry about limiting to five items later
         //delete previously grabbed items
