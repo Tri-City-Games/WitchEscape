@@ -33,9 +33,9 @@ public class GameClass {
 
         ArisMarketSquare.myMarket();
         // run Laura's code
-=======
+
         Pier_Gameplay.run_pier();
->>>>>>> 09fb7c72ccc3fc5d1045b2c990151d315f5e2993
+
     }
 
     // Prints opening banner
