@@ -7,36 +7,26 @@ import java.util.Scanner;
 import java.io.File;
 
 public class GameClass {
-
-    private String currentLocation= "house"; // This could be an ENUM
+    // This is a placeholder for now.
+    private String currentLocation= "House"; // This could be an ENUM
     private ArrayList<String> itemsInRoom = new ArrayList<String>(Arrays.asList("frying pan", "rock", "bread"));
     private ArrayList<String> inventory = new ArrayList<String>(5);
     private int health = 5;
     private String equipped;
 
-
-
-//<a href="https://manytools.org/hacker-tools/ascii-banner/"></a>
-
-//    public static void main(String[] args) {
-//        /* eventually we want something like this:
-//GameClass game = new GameClass();
-//game.startGame();
-//*/
-//        banner();
-//        wantInstructions();
-//        intro();
-//        printStats();
-//    }
-
-
     public GameClass() {
-
+        // instantiates a new Game
     }
 
     void startNewGame() {
         banner();
+        wantInstructions();
+        intro();
+        // print house stuff here
+        // run Sohail's code
+        // run Laura's code
     }
+
     // Prints opening banner
     private static void banner(){
         Thread thd = new Thread();
@@ -51,13 +41,12 @@ public class GameClass {
                     System.out.println();
                 }
                 System.out.print(character);
-                Thread.sleep(10);
+                Thread.sleep(3);
             }
         }catch(IOException | InterruptedException e){
             e.printStackTrace();
         }
         // Add sound clip here
-        System.out.println("Banner");
     }
 
     // Asks player if they want instructions
@@ -80,28 +69,17 @@ public class GameClass {
 
     private static void intro(){
         // Add typewriter effect to this later. See notes
-// The following text needs to be moved to XML once we get it working.
+        // The following text needs to be moved to XML once we get it working.
         System.out.println("   In the year 1692, during the Salem Witch trials, another heretical entity comes into being: the Undead. \n" +
                 "You are a young witch trying to leave your village in order to escape from the Puritans \n" +
                 "who have hanged or burned other suspected witches in town. Leaving the village has become more complicated \n" +
                 "now that you have to avoid not only the townsfolk, but also...ZOMBIES." +
                 "\n" +
                 "\n" +
-                "You wake up your home to the sound of townspeople banging on your door. Quickly gather your items and escape.");
+                "This is where we print the XML.");
     }
 
-    private static void printStats(){
-        //This is hard coded for now
-        // set to initial state later
-        String currentLocation= "House";
-        // Look up how to add multiple items to an array succinctly
-        ArrayList<String> itemsInRoom = new ArrayList<String>();
-        itemsInRoom.add("rock");
-        itemsInRoom.add("frying pan");
-        itemsInRoom.add("bread");
-        ArrayList<String> inventory = new ArrayList<String>(5);
-        int health = 5;
-
+    private void printStats(){
         // This prints after every turn
         System.out.println("---------------- \n" +
                 "Current Location: " + currentLocation + "\n" +
@@ -109,5 +87,4 @@ public class GameClass {
                 "Inventory: " + inventory + "\n" +
                 "Health: " + health);
     }
-
 }
