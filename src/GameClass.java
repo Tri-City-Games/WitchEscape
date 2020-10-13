@@ -5,11 +5,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
+<<<<<<< HEAD
 import com.market.ArisMarketSquare;
+=======
+import com.game.pier.Pier_Gameplay;
+
+import com.game.house.*;
+>>>>>>> 09fb7c72ccc3fc5d1045b2c990151d315f5e2993
 
 public class GameClass {
     // This is a placeholder for now.
-    private String currentLocation= "House"; // This could be an ENUM
+    private String currentLocation= "com.game.house.House"; // This could be an ENUM
     private ArrayList<String> itemsInRoom = new ArrayList<String>(Arrays.asList("frying pan", "rock", "bread"));
     private ArrayList<String> inventory = new ArrayList<String>(5);
     private int health = 5;
@@ -23,11 +29,15 @@ public class GameClass {
         banner();
         wantInstructions();
         intro();
-        // print house stuff here
+        House.play();
         // run Sohail's code
+<<<<<<< HEAD
 
         ArisMarketSquare.myMarket();
         // run Laura's code
+=======
+        Pier_Gameplay.run_pier();
+>>>>>>> 09fb7c72ccc3fc5d1045b2c990151d315f5e2993
     }
 
     // Prints opening banner
