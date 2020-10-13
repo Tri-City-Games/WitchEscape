@@ -1,9 +1,15 @@
+import com.we.xml.Location;
+import com.we.xml.StaXParser;
+
 import java.util.ArrayList;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class GameEngine {
     public static void main(String[] args) {
+        StaXParser read = new StaXParser();
+        List<Location> readConfig = read.readConfig("locations.xml");
         GameClass game = new GameClass();
         game.startNewGame();
     }
