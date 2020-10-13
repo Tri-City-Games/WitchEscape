@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
+import com.market.ArisMarketSquare;
 
 public class GameClass {
     // This is a placeholder for now.
@@ -24,6 +25,8 @@ public class GameClass {
         intro();
         // print house stuff here
         // run Sohail's code
+
+        ArisMarketSquare.myMarket();
         // run Laura's code
     }
 
