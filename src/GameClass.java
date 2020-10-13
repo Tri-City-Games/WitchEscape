@@ -5,13 +5,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
-<<<<<<< HEAD
+
 import com.market.ArisMarketSquare;
-=======
 import com.game.pier.Pier_Gameplay;
 
 import com.game.house.*;
->>>>>>> 09fb7c72ccc3fc5d1045b2c990151d315f5e2993
 
 public class GameClass {
     // This is a placeholder for now.
@@ -31,13 +29,10 @@ public class GameClass {
         intro();
         House.play();
         // run Sohail's code
-<<<<<<< HEAD
 
         ArisMarketSquare.myMarket();
         // run Laura's code
-=======
         Pier_Gameplay.run_pier();
->>>>>>> 09fb7c72ccc3fc5d1045b2c990151d315f5e2993
     }
 
     // Prints opening banner
