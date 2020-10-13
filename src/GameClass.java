@@ -8,7 +8,6 @@ import java.io.File;
 
 import com.market.ArisMarketSquare;
 import com.game.pier.Pier_Gameplay;
-
 import com.game.house.*;
 
 public class GameClass {
@@ -27,9 +26,13 @@ public class GameClass {
         banner();
         wantInstructions();
         intro();
+        // run Amanda's code
         House.play();
         // run Sohail's code
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86b660e741c1ffc60b1a32efec47a05c3578f35f
         ArisMarketSquare.myMarket();
         // run Laura's code
         Pier_Gameplay.run_pier();
