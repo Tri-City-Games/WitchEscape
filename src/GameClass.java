@@ -29,11 +29,8 @@ public class GameClass {
         intro();
         House.play();
         // run Sohail's code
-
-
         ArisMarketSquare.myMarket();
         // run Laura's code
-
         Pier_Gameplay.run_pier();
 
     }
