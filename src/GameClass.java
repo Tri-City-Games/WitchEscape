@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
+import com.game.pier.Pier_Gameplay;
 
 import com.game.house.*;
 
@@ -26,7 +27,7 @@ public class GameClass {
         intro();
         House.play();
         // run Sohail's code
-        // run Laura's code
+        Pier_Gameplay.run_pier();
     }
 
     // Prints opening banner
