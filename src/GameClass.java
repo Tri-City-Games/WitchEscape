@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
+import com.game.pier.Pier_Gameplay;
 
 public class GameClass {
     // This is a placeholder for now.
@@ -24,7 +25,7 @@ public class GameClass {
         intro();
         // print house stuff here
         // run Sohail's code
-        // run Laura's code
+        Pier_Gameplay.run_pier();
     }
 
     // Prints opening banner
