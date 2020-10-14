@@ -23,42 +23,40 @@ public class GameClass {
     }
 
     void startNewGame() {
-        banner();
+//        banner();
         wantInstructions();
         intro();
         // run Amanda's code
         House.play();
         // run Sohail's code
-<<<<<<< HEAD
 
-=======
->>>>>>> 86b660e741c1ffc60b1a32efec47a05c3578f35f
         ArisMarketSquare.myMarket();
         // run Laura's code
         Pier_Gameplay.run_pier();
+        ArisMarketSquare.fourthPrompt();
     }
 
     // Prints opening banner
-    private static void banner(){
-        Thread thd = new Thread();
-        File file = new File("src/Banner.txt");
-        try {
-            int charValue = 0;
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            thd.start();
-            while ((charValue = reader.read()) != -1) {
-                char character = (char)charValue;
-                if(character == '\0'){
-                    System.out.println();
-                }
-                System.out.print(character);
-                Thread.sleep(3);
-            }
-        }catch(IOException | InterruptedException e){
-            e.printStackTrace();
-        }
-        // Add sound clip here
-    }
+//    private static void banner(){
+//        Thread thd = new Thread();
+//        File file = new File("src/Banner.txt");
+//        try {
+//            int charValue = 0;
+//            BufferedReader reader = new BufferedReader(new FileReader(file));
+//            thd.start();
+//            while ((charValue = reader.read()) != -1) {
+//                char character = (char)charValue;
+//                if(character == '\0'){
+//                    System.out.println();
+//                }
+//                System.out.print(character);
+//                Thread.sleep(3);
+//            }
+//        }catch(IOException | InterruptedException e){
+//            e.printStackTrace();
+//        }
+//        // Add sound clip here
+//    }
 
     // Asks player if they want instructions
     private static void wantInstructions(){
