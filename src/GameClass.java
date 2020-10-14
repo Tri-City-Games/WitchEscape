@@ -36,27 +36,27 @@ public class GameClass {
         ArisMarketSquare.fourthPrompt();
     }
 
-    // Prints opening banner
-//    private static void banner(){
-//        Thread thd = new Thread();
-//        File file = new File("src/Banner.txt");
-//        try {
-//            int charValue = 0;
-//            BufferedReader reader = new BufferedReader(new FileReader(file));
-//            thd.start();
-//            while ((charValue = reader.read()) != -1) {
-//                char character = (char)charValue;
-//                if(character == '\0'){
-//                    System.out.println();
-//                }
-//                System.out.print(character);
-//                Thread.sleep(3);
-//            }
-//        }catch(IOException | InterruptedException e){
-//            e.printStackTrace();
-//        }
-//        // Add sound clip here
-//    }
+     //Prints opening banner
+    private static void banner(){
+        Thread thd = new Thread();
+        File file = new File("src/Banner.txt");
+        try {
+            int charValue = 0;
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            thd.start();
+            while ((charValue = reader.read()) != -1) {
+                char character = (char)charValue;
+                if(character == '\0'){
+                    System.out.println();
+                }
+                System.out.print(character);
+                Thread.sleep(1);
+            }
+        }catch(IOException | InterruptedException e){
+            e.printStackTrace();
+        }
+        // Add sound clip here
+    }
 
     // Asks player if they want instructions
     private static void wantInstructions(){
