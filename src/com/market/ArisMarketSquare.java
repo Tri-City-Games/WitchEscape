@@ -252,8 +252,7 @@ public class ArisMarketSquare {
                     break;
                 case 2:
                     System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
-                            "'Why are you come to my Shoppe once again. Have you my leather?." +
-                            "okie dokie. Here ye horse! '");
+                            "'Why are you come to my Shoppe once again. '");
                     break;
                 case 3:
                     System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
@@ -295,7 +294,8 @@ public class ArisMarketSquare {
                     break;
                 case 2:
                     System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
-                            "You will give pieces of leather to the lady and receive your horse");
+                            "Have you my leather? okie dokie. Here ye horse! " +
+                            "You will give me pieces of leather to the lady and receive your horse");
                     break;
                 case 3:
                     System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
