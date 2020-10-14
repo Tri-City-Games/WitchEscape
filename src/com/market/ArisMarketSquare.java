@@ -1,5 +1,6 @@
 package com.market;
 
+
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
@@ -7,131 +8,286 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+//public class ArisMarketSquare {
+//    // user input-user selects items to put in bag
+//    static ArrayList<String> marketList = new ArrayList<String>(Arrays.asList("Leather", "More Leather", "Barret .50cal", "Pumpkin spice latte", "lucky penny"));
+//
+////put market is east of house or direction
+//    //pier is north of market
+//    // inventory, text parsing, item management  all use xml
+//
+//    public static void myMarket() {
+//        firstPrompt();
+//        insideShoppe();
+//        secondPrompt();
+//        thirdPrompt();
+//    }
+//        //****from Tom
+////house market and pier are scenes****
+//        //if similar put in ONE superclass****
+//        //if user enters 1 goto wichwich sandwich shoppe
+//        //if user enters 2 goto to shoe lady's shoppe
+//        //if user enters 3 goto puritan church
+//    public static void firstPrompt() {    // ask player where they want to go
+//        System.out.println("You are now in Aris Market Square. What area would you like to explore next? \n " +
+//                "Enter 1 for WichWich SandWich \n " +
+//                "Enter 2 for Shoe Lady's Shoppe \n " +
+//                "Enter 3 for WhichToSlay Church");
+//        while (true) {
+//            Scanner locationInput = new Scanner(System.in);
+//            int response = locationInput.nextInt();
+////    System.out.println(response);
+//
+//            switch (response) {
+//                case 1:
+//                    System.out.println("You are now inside WichWich Sandwich Shoppe");
+//                    break;
+//                case 2:
+//                    System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
+//                            "Make a deal with the lady to obtain your horse for the escape.\n" +
+//                            "You must collect 3 pieces of leather to trade for the horse.");
+//                    insideShoppe();
+//                    break;
+//                case 3:
+//                    System.out.println("You are now inside WhichToSlay Church. You have also been slayed. ");
+//                    System.out.println("GAME OVER");
+//                    System.exit(0);
+//                    break;
+//                default:
+//                    System.out.println("You must be great at many things. Following simple directions is not one of them");
+//            }
+//        }
+//    }
+//
+//    public static void insideShoppe() {
+//        //System.out.println("Grab Items for your bag. \n ");
+//        // "You can only have 5 items in your bag at any given time.
+//
+//        System.out.println("Grab an item. You can only hold a total of 5 items from all locations at one time \n" +
+//                "Enter 0 for " + marketList.get(0) + "\n" +
+//                "Enter 1 for " + marketList.get(1) + "\n" +
+//                "Enter 2 for " + marketList.get(2) + "\n" +
+//                "Enter 3 for " + marketList.get(3) + "\n" +
+//                "Enter 4 for " + marketList.get(4));
+//
+//        //prompt to grab another item until 5 items in bag
+//        while (true) {
+//            Scanner itemInput = new Scanner(System.in);
+//            int response2 = itemInput.nextInt();
+//            System.out.println(response2);
+////can call from list using index later can code this
+//            if (response2 == 0) {
+//                System.out.println("you now have " + marketList.get(0) + " in your bag");
+//            } else if (response2 == 1) {
+//                System.out.println("you now have " + marketList.get(1) + " in your bag");
+//                break;
+//            } else if (response2 == 2) {
+//                System.out.println("you now have " + marketList.get(2) + " in your bag");
+//                break;
+//            } else if (response2 == 3) {
+//                System.out.println("you now have " + marketList.get(3) + " in your bag");
+//                break;
+//            } else if (response2 == 4) {
+//                System.out.println("you now have " + marketList.get(4) + " in your bag");
+//                break;
+//            } else
+//                break;
+//        }
+//    }
+//
+//    public static void thirdPrompt() {
+//        System.out.println("Which area would you like to explore next? \n " +
+//                "Enter 1 for WichWich SandWich \n" +
+//                "Enter 2 for Shoe Lady's Shoppe \n" +
+//                "Enter 3 for WhichToSlay Church \n" +
+//                "Enter 4 for Pier");
+//        while (true) {
+//            Scanner locationInput2 = new Scanner(System.in);
+//            int response3 = locationInput2.nextInt();
+////    System.out.println(response);
+//
+//            switch (response3) {
+//                case 1:
+//                    System.out.println("You are now inside WichWich Sandwich Shoppe");
+//                    break;
+//                case 2:
+//                    System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
+//                            "You will give pieces of leather to the lady and receive your horse");
+//                    break;
+//                case 3:
+//                    System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
+//                    break;
+//                case 4:
+//                    System.out.println("You are now in the Pier");
+//                    break;
+//                default:
+//                    System.out.println("BRUHHHHH");
+//            }
+//            System.out.println("You now have " + marketList + " in your bag! ");
+//        }
+//    }
+//    public static void fourthPrompt() {
+//        new Pier_Gameplay();
+//    }
+//// worry about limiting to five items later
+//            //delete previously grabbed items
+//            //add only what user grabbed
+////
+////inventory is what the user has it in its bag
+//// show what user has in bag
+////      for when user returns from the pier
+//
+//
+//
+//
+//}
+
+
+
+
+
+
+
 public class ArisMarketSquare {
+    // user input-user selects items to put in bag
+    static ArrayList<String> marketList = new ArrayList<String>(Arrays.asList("Leather", "More Leather", "Barret .50cal", "Pumpkin spice latte", "lucky penny"));
+
 //put market is east of house or direction
     //pier is north of market
     // inventory, text parsing, item management  all use xml
 
     public static void myMarket() {
-        //****from Tom
+        firstPrompt();
+        insideShoppe();
+//        secondPrompt();
+        thirdPrompt();
+    }
+    //****from Tom
 //house market and pier are scenes****
-        //if similar put in ONE superclass****
-        //if user enters 1 goto wichwich sandwich shoppe
-        //if user enters 2 goto to shoe lady's shoppe
-        //if user enters 3 goto puritan church
-       System.out.println("You are now in Aris Market Square. What area would you like to explore next? \n " +
+    //if similar put in ONE superclass****
+    //if user enters 1 goto wichwich sandwich shoppe
+    //if user enters 2 goto to shoe lady's shoppe
+    //if user enters 3 goto puritan church
+    public static void firstPrompt() {    // ask player where they want to go
+        System.out.println("You are now in Aris Market Square. What area would you like to explore next? \n " +
                 "Enter 1 for WichWich SandWich \n " +
                 "Enter 2 for Shoe Lady's Shoppe \n " +
                 "Enter 3 for WhichToSlay Church");
-while (true) {
-    Scanner locationInput = new Scanner(System.in);
-    int response = locationInput.nextInt();
+//        while (true) {
+            Scanner locationInput = new Scanner(System.in);
+            int response = locationInput.nextInt();
 //    System.out.println(response);
 
-    switch (response) {
-        case 1:
-            System.out.println("You are now inside WichWich Sandwich Shoppe");
-            break;
-        case 2:
-            System.out.println("You are now inside Shoe Lady's Shoppe");
-            break;
-        case 3:
-            System.out.println("You are now inside WhichToSlay Church");
-            break;
-        default:
-            System.out.println("BRUHHHHH");
+            switch (response) {
+                case 1:
+                    System.out.println("You are now inside WichWich Sandwich Shoppe");
+                    break;
+                case 2:
+                    System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
+                            "Make a deal with the lady to obtain your horse for the escape.\n" +
+                            "You must collect 3 pieces of leather to trade for the horse.");
+                    insideShoppe();
+                    break;
+                case 3:
+                    System.out.println("You are now inside WhichToSlay Church. You have also been slayed. ");
+                    System.out.println("GAME OVER");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("You must be great at many things. Following simple directions is not one of them");
+            }
+//        }
     }
-//    if ((response >= 4) || (response <= 0)) {
-//        System.out.println("NUMBERS ARE CLEARLY NOT YOUR STRONG SUIT! TRY AGAIN!");
-//    } else if (response == 1) {
-//        System.out.println("you are now in WichWich SandWich");
-//        break;
-//    } else if (response == 2) {
-//        System.out.println("you are now in Shoe lady's Shoppe");
-//        break;
-//    } else if (response == 3) {
-//        System.out.println("you are now in WhichToSlay Church");
-//        break;
-//    } else
-//        break;
-//    //look into changing this into a switch statement. may make it clearer. still need break****
-//    // look into labeled break. loop with break in front****
-//}
-        //{System.out.println("WRONG!");
 
-
-   // code here if wrong come up restate where wanna go
-
-        // user input-user selects items to put in bag
-        ArrayList<String> marketList = new ArrayList<String>(Arrays.asList("Leather", "More Leather", "Barret .50cal", "Horse", "lucky penny"));
-
-//
-//        System.out.println("Grab Items for your bag. \n ");
-//                // "You can only have 5 items in your bag at any given time.
-//
-//        System.out.println("Grab upto 5 items: \n" +
-//                "Enter 1 for Leather \n" +
-//                "Enter 2 for RPG \n" +
-//                "Enter 3 for Barret .50cal \n" +
-//                "Enter 4 for Horse \n" +
-//                "Enter 5 for Lucky Penny1");
-//        System.out.println(marketList);
-//
-//        Scanner itemInput = new Scanner(System.in);
-//        int response2 = itemInput.nextInt();
-//        System.out.println(response2);
-//
-//        if (response2 == 1) {System.out.println("you are now in WichWich SandWich");}
-//        else if (response2 == 2) {System.out.println("you are now in Shoe lady's Shoppe");}
-//        else if (response2 == 3) {System.out.println("you are now in WhichToSlay Church"); }
-//        else {System.out.println("WRONG!");}
-//        List marketSquareInventory = new ArrayList();
-
-
-        System.out.println("Grab Items for your bag. \n ");
+    public static void insideShoppe() {
+        //System.out.println("Grab Items for your bag. \n ");
         // "You can only have 5 items in your bag at any given time.
 
-        System.out.println("Grab an item. You can only hold a total 0f 5 items from all locations at one time \n" +
+        System.out.println("Grab an item. You can only hold a total of 5 items from all locations at one time \n" +
                 "Enter 0 for " + marketList.get(0) + "\n" +
                 "Enter 1 for " + marketList.get(1) + "\n" +
                 "Enter 2 for " + marketList.get(2) + "\n" +
                 "Enter 3 for " + marketList.get(3) + "\n" +
                 "Enter 4 for " + marketList.get(4));
-//        System.out.println(marketList);
 
-    //prompt  to grab another item
-while (true) {
-    Scanner itemInput = new Scanner(System.in);
-    int response2 = itemInput.nextInt();
-    System.out.println(response2);
+        //prompt to grab another item until 5 items in bag
+//        while (true) {
+            Scanner itemInput = new Scanner(System.in);
+            int response2 = itemInput.nextInt();
+            System.out.println(response2);
 //can call from list using index later can code this
-    if (response2 == 0) {
-        System.out.println("you now have" + marketList.get(0) + " in your bag");
-    } else if (response2 == 1) {
-        System.out.println("you now have" + marketList.get(1) + " in your bag");
-        break;
-    } else if (response2 == 2) {
-        System.out.println("you now have" + marketList.get(2) + " in your bag");
-        break;
-    } else if (response2 == 3) {
-        System.out.println("you now have" + marketList.get(3) + " in your bag");
-        break;
-    } else if (response2 == 4) {
-        System.out.println("you now have" + marketList.get(4) + " in your bag");
-        break;
-    }else
-        break;
-}
+            if (response2 == 0) {
+                System.out.println("you now have " + marketList.get(0) + " in your bag");
+            } else if (response2 == 1) {
+                System.out.println("you now have " + marketList.get(1) + " in your bag");
+//                break;
+            } else if (response2 == 2) {
+                System.out.println("you now have " + marketList.get(2) + " in your bag");
+//                break;
+            } else if (response2 == 3) {
+                System.out.println("you now have " + marketList.get(3) + " in your bag");
+//                break;
+            } else if (response2 == 4) {
+                System.out.println("you now have " + marketList.get(4) + " in your bag");
+//                break;
+            } else{}
+//                break;
+//        }
+    }
 
+    public static void thirdPrompt() {
+        System.out.println("Which area would you like to explore next? \n " +
+                "Enter 1 for WichWich SandWich \n" +
+                "Enter 2 for Shoe Lady's Shoppe \n" +
+                "Enter 3 for WhichToSlay Church \n" +
+                "Enter 4 for Pier");
+//        while (true) {
+            Scanner locationInput2 = new Scanner(System.in);
+            int response3 = locationInput2.nextInt();
+//    System.out.println(response);
+
+            switch (response3) {
+                case 1:
+                    System.out.println("You are now inside WichWich Sandwich Shoppe");
+                    break;
+                case 2:
+                    System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
+                            "You will give pieces of leather to the lady and receive your horse");
+                    break;
+                case 3:
+                    System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
+                    break;
+                case 4:
+                    System.out.println("You are now in the Pier");
+                    break;
+                default:
+                    System.out.println("BRUHHHHH");
+            }
+            System.out.println("You now have " + marketList + " in your bag! ");
+//        }
+    }
+//
 // worry about limiting to five items later
-        //delete previously grabbed items
-        //add only what user grabbed
+    //delete previously grabbed items
+    //add only what user grabbed
 //
 //inventory is what the user has it in its bag
 // show what user has in bag
-                System.out.println("You now have " + marketList + " in your bag! ");
-
-            }
+//      for when user returns from the pier
 
 
-        }}
+    public static void fourthPrompt() {
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
