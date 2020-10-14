@@ -252,7 +252,8 @@ public class ArisMarketSquare {
                     break;
                 case 2:
                     System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
-                            "You will give pieces of leather to the lady and receive your horse");
+                            "'Why are you come to my Shoppe once again. Have you my leather?." +
+                            "okie dokie. Here ye horse! '");
                     break;
                 case 3:
                     System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
@@ -278,7 +279,36 @@ public class ArisMarketSquare {
 
     public static void fourthPrompt() {
 
-    }
+            System.out.println("Which area would you like to explore next? \n " +
+                    "Enter 1 for WichWich SandWich \n" +
+                    "Enter 2 for Shoe Lady's Shoppe \n" +
+                    "Enter 3 for WhichToSlay Church \n" +
+                    "Enter 4 for Pier");
+//        while (true) {
+            Scanner locationInput2 = new Scanner(System.in);
+            int response3 = locationInput2.nextInt();
+//    System.out.println(response);
+
+            switch (response3) {
+                case 1:
+                    System.out.println("You are now inside WichWich Sandwich Shoppe");
+                    break;
+                case 2:
+                    System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
+                            "You will give pieces of leather to the lady and receive your horse");
+                    break;
+                case 3:
+                    System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
+                    break;
+                case 4:
+                    System.out.println("You are now in the Pier");
+                    break;
+                default:
+                    System.out.println("BRUHHHHH");
+            }
+            System.out.println("You now have " + marketList + " in your bag! ");
+//        }
+             }
 }
 
 
