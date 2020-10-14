@@ -22,7 +22,7 @@ public class GameClass {
         // instantiates a new Game
     }
 
-    void startNewGame() {
+    void startNewGame() throws InterruptedException {
 //        banner();
         wantInstructions();
         intro();

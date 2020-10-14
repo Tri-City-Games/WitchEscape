@@ -9,7 +9,7 @@ import static com.game.pier.Pier.*;
 
 public class Pier_Gameplay {
 
-    static void player_input() {
+    static void player_input() throws InterruptedException {
         //health and item inventory count
         Scanner direction_choice = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Where would you like to go?");
@@ -49,19 +49,31 @@ public class Pier_Gameplay {
     }
 
 
-    public static void run_pier() {
+    public static void run_pier() throws InterruptedException {
         System.out.println("You emerge from the Market. You're standing on the boardwalk near the sea and you see a group of Sailors and further down an Ale House.");
+        Thread.sleep(5000);
         player_input();
+        Thread.sleep(5000);
         random_gossip();
+        Thread.sleep(5000);
         System.out.println("You leave and look around, you see the pier and a group of sailors."); //need to add a way to remove locations here
+        Thread.sleep(5000);
         player_input();
+        Thread.sleep(5000);
         System.out.println("You turn around, you see the pier and three ships.");
+        Thread.sleep(5000);
         player_input();
+        Thread.sleep(5000);
         System.out.println("You're back on the pier, you see some wooden crates and grain bags.");
+        Thread.sleep(5000);
         player_input();
+        Thread.sleep(5000);
         random_gossip();
+        Thread.sleep(5000);
         System.out.println("Still on the pier, last place to look is some ale kegs.");
+        Thread.sleep(5000);
         player_input();
+        Thread.sleep(5000);
         System.out.println("You survive, get the piece of leather and head back toward the Market.");
     }
 }

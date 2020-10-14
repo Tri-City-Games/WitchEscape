@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GameEngine {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         StaXParser read = new StaXParser();
         List<Location> readConfig = read.readConfig("locations.xml");
         GameClass game = new GameClass();
