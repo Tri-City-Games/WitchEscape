@@ -10,18 +10,7 @@ import com.game.pier.Pier_Gameplay;
 import com.game.house.*;
 
 public class GameClass {
-<<<<<<< HEAD
-    // This is a placeholder for now.
-    private String currentLocation= "com.game.house.House"; // This could be an ENUM
-    private ArrayList<String> itemsInRoom = new ArrayList<String>(Arrays.asList("frying pan", "rock", "bread"));
-    private ArrayList<String> inventory = new ArrayList<String>(5);
-    private int health = 5;
-    private String equipped;
-
-    public GameClass()
-=======
-    public GameClass() {
->>>>>>> 421bd9ece969186220e03798dae25462fb18bca0
+    public GameClass(){
         // instantiates a new Game
     }
 
@@ -42,20 +31,7 @@ public class GameClass {
         ArisMarketSquare.fourthPrompt();
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 421bd9ece969186220e03798dae25462fb18bca0
-
     // Prints opening banner
-
-     //Prints opening banner
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9d2fb68c1c658843e81d044cf3945411a2efa683
->>>>>>> 421bd9ece969186220e03798dae25462fb18bca0
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
@@ -103,6 +79,4 @@ public class GameClass {
                 "who have hanged or burned other suspected witches in town. Leaving the village has become more complicated \n" +
                 "now that you have to avoid not only the townsfolk, but also...ZOMBIES.");
     }
-    //allow space bar to skip timing for story
-    //try diff timings
 }
