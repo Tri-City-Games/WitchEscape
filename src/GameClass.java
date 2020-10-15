@@ -36,11 +36,11 @@ public class GameClass {
         ArisMarketSquare.fourthPrompt();
     }
 
-<<<<<<< HEAD
+
     // Prints opening banner
-=======
+
      //Prints opening banner
->>>>>>> c15d79ef17131a99a6cde2887071e79c9cf928dc
+
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
@@ -100,4 +100,6 @@ public class GameClass {
                 "Inventory: " + inventory + "\n" +
                 "Health: " + health);
     }
+    //allow space bar to skip timing for story
+    //try diff timings
 }
