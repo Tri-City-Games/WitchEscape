@@ -1,23 +1,15 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 
-import com.market.ArisMarketSquare;
+import com.game.player.Player;
+import com.game.market.ArisMarketSquare;
 import com.game.pier.Pier_Gameplay;
 import com.game.house.*;
 
 public class GameClass {
-    // This is a placeholder for now.
-    private String currentLocation= "com.game.house.House"; // This could be an ENUM
-    private ArrayList<String> itemsInRoom = new ArrayList<String>(Arrays.asList("frying pan", "rock", "bread"));
-    private ArrayList<String> inventory = new ArrayList<String>(5);
-    private int health = 5;
-    private String equipped;
-
     public GameClass() {
         // instantiates a new Game
     }
@@ -26,21 +18,19 @@ public class GameClass {
         banner();
         wantInstructions();
         intro();
+        System.out.println("Before House, your health is: " + Player.getHealth());
         // run Amanda's code
         House.play();
-        // run Sohail's code
+        System.out.println("After House, your health is: " + Player.getHealth());
 
+        // run Sohail's code
         ArisMarketSquare.myMarket();
+
         // run Laura's code
         Pier_Gameplay.run_pier();
         ArisMarketSquare.fourthPrompt();
     }
 
-<<<<<<< HEAD
-    // Prints opening banner
-=======
-     //Prints opening banner
->>>>>>> c15d79ef17131a99a6cde2887071e79c9cf928dc
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
@@ -86,18 +76,6 @@ public class GameClass {
         System.out.println("   In the year 1692, during the Salem Witch trials, another heretical entity comes into being: the Undead. \n" +
                 "You are a young witch trying to leave your village in order to escape from the Puritans \n" +
                 "who have hanged or burned other suspected witches in town. Leaving the village has become more complicated \n" +
-                "now that you have to avoid not only the townsfolk, but also...ZOMBIES." +
-                "\n" +
-                "\n" +
-                "This is where we print the XML.");
-    }
-
-    private void printStats(){
-        // This prints after every turn
-        System.out.println("---------------- \n" +
-                "Current Location: " + currentLocation + "\n" +
-                "Items in Room: " + itemsInRoom + "\n" +
-                "Inventory: " + inventory + "\n" +
-                "Health: " + health);
+                "now that you have to avoid not only the townsfolk, but also...ZOMBIES.");
     }
 }

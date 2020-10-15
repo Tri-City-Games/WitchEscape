@@ -1,4 +1,4 @@
-package com.we.xml;
+package com.game.xml;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.we.xml;
+package com.game.xml;
 
 public class Location {
     // All XML tags have to be added as variables here
