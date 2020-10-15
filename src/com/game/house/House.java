@@ -1,5 +1,7 @@
 package com.game.house;
 
+import com.game.player.Player;
+
 import java.util.Scanner;
 
 //Does this need to be a class or will it be taken care of with XML?
@@ -15,7 +17,7 @@ public class House {
             "a closet, and window. Your mother is baking bread \n" +
             "on the hearth.";
 
-    private static String options = "What would you like to do?\n" +
+    private static String options1 = "What would you like to do?\n" +
             "1. Open front door.\n" +
             "2. Open back door.\n" +
             "3. Talk to your mother.\n" +
@@ -44,16 +46,37 @@ public class House {
 
     private static String op6 = "You hug your mother, and climb out the window which faces the Market. [CUE MARKET CODE]";
 
-    public static void play(){
+    private static String op7 = "";
+
+    private static String op8 = "";
+
+    private static String op9 = "";
+
+    private static String whatsLeftInTheBox = "You thought you saw a piece of leather in here earlier.";
+
+    private static String options2 = "What would you like to do?\n" +
+            "7. Open front door.\n" +
+            "8. Open back door.\n" +
+            "9. Check the closet.";
+
+    public static void play() {
         System.out.println("THE HOUSE");
         System.out.println(housePrompt);
         System.out.println(" ");
         System.out.println(whatsInTheBox);
         System.out.println(" ");
-        collectInput();
+        System.out.println("Your health is now: " + Player.getHealth());
+        collectInput(options1);
     }
 
-    private static void collectInput(){
+    public void returnFromMarket() {
+        System.out.println("THE HOUSE");
+        System.out.println(whatsLeftInTheBox);
+        System.out.println(" ");
+        collectInput(options2);
+    }
+
+    private static void collectInput(String options) {
         Scanner input = new Scanner(System.in);
         System.out.println(" ");
         System.out.println(options);
@@ -61,11 +84,13 @@ public class House {
         printConsequence(houseInput);
     }
 
-    private static void printConsequence(int houseInput){
-        switch(houseInput){
+    private static void printConsequence(int houseInput) {
+        switch (houseInput) {
             case 1:
                 System.out.println(op1);
-                collectInput();
+                Player.changeHealth(-2);
+                System.out.println("Your health is now:" + Player.getHealth());
+                collectInput(options1);
                 break;
             case 2:
                 System.out.println(op2);
@@ -73,25 +98,36 @@ public class House {
                 break;
             case 3:
                 System.out.println(op3);
-                collectInput();
+                collectInput(options1);
                 break;
             case 4:
                 System.out.println(op4);
-                collectInput();
+                Player.changeHealth(1);
+                System.out.println("Your health is now:" + Player.getHealth());
+                collectInput(options1);
                 break;
             case 5:
                 System.out.println(op5);
-                collectInput();
+                collectInput(options1);
                 break;
             case 6:
                 System.out.println(op6);
                 break;
+            case 7:
+                System.out.println(op7);
+                break;
+            case 8:
+                System.out.println(op8);
+                break;
+            case 9:
+                System.out.println(op9);
+                break;
             default:
                 System.out.println("The number you entered was invalid. Please try again.");
-                collectInput();
+                collectInput(options1); // This is awkward right here because it needs to print options 1 or options 2
         }
     }
-
+}
 /*  Possible actions in the house
     -Talk to mom (get bread)
     -Eat bread
@@ -109,4 +145,3 @@ public class House {
     -Throw rock
     -
  */
-}

@@ -1,4 +1,4 @@
-package com.we.xml;
+package com.game.xml;
 // Based off tutorial here: https://www.vogella.com/tutorials/JavaXML/article.html
 
 import java.io.FileInputStream;
