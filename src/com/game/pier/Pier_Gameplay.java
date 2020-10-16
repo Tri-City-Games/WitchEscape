@@ -17,6 +17,35 @@ public class Pier_Gameplay {
         String choice = direction_choice.nextLine();  // Read user input
         //System.out.println(choice);
             //add while loop for health (while health >0..)
+
+//        String cmd="foo bar \"foo bar\" foo"; String cmd would be 'choice'
+//[...]
+//        ArrayList commands = new ArrayList();
+//        char[] chars = cmd.toCharArray();
+//        boolean open = false;
+//        StringBuffer sb = new StringBuffer();
+//        for (int i = 0; i < chars.length; i++) {
+//            if (chars[i] == '\"') {
+//                open = !open;
+//            } else if (chars[i] == ' ' && !open) {
+//                commands.add(sb.toString());
+//                sb = new StringBuffer();
+//            } else {
+//                sb.append(chars[i]);
+//            }
+//        }
+//        if (sb.length() > 0) {
+//            commands.add(sb.toString());
+//        }
+//
+//        String[] pieces = new String[commands.size()];
+//        commands.toArray(pieces);
+
+        //OR use split: String strs[] = " 1 ON OFF".split(" ");
+        //With this example you'll get this array: ["", "1", "ON", "OFF"].
+        //add verbs to an array list, add nouns to another array list check both user input [0] and [1] against each
+        //verb/noun array
+
         while(true) {
             if (choice.equals("sailor group")) {
                 System.out.println("You arrive at " + choice);
