@@ -4,24 +4,35 @@ import java.util.*;
 
 public class Pier {
     public static void ship_picker() {
+        int count = 0;
         ships: while (true){
-            System.out.println("You see 3 ships on the Pier, there is a brown ship, a black and white ship. Which one would you like to checkout?");
+            System.out.println("You see 3 ships on the Pier, there is a brown ship, a black ship and white ship. \n Which one would you like to checkout?");
             Scanner direction_choice = new Scanner(System.in);
             String pick=direction_choice.nextLine();
             switch(pick){
                 case"brown ship":
                     boat_1();
+                    count++;
+                    //System.out.println(count);
                     break;
                 case"black ship":
                     boat_2();
+                    count++;
+                    //System.out.println(count);
                     break;
                 case"white ship":
+                    //System.out.println(count);
+                    count++;
                     boat_3();
                     break;
                 default:
                     System.out.println("Please pick a ship to explore.");
                     ship_picker();
-                    break ships;
+                    break;
+            }
+                    //break ships;
+            if (count == 3) {
+                break ships;
             }
         }
     }

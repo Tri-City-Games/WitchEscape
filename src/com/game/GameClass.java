@@ -20,10 +20,10 @@ public class GameClass {
         wantInstructions();
         intro();
         // run Amanda's code
-        House.play();
+        //House.play();
 
         // run Sohail's code
-        ArisMarketSquare.myMarket();
+        //ArisMarketSquare.myMarket();
 
         // run Laura's code
         Pier_Gameplay.run_pier();
