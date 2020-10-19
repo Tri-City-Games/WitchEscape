@@ -18,12 +18,12 @@ public class GameClass {
     public void startNewGame() throws InterruptedException {
         banner();
         wantInstructions();
-        intro();
+        //intro();
         // run Amanda's code
-        House.play();
+        //House.play();
 
         // run Sohail's code
-        ArisMarketSquare.myMarket();
+        //ArisMarketSquare.myMarket();
 
         // run Laura's code
         Pier_Gameplay.run_pier();
