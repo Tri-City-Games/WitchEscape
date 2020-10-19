@@ -1,5 +1,6 @@
 package com.game.player;
 
+
 import java.util.ArrayList;
 
 public abstract class Player {
@@ -15,6 +16,7 @@ public abstract class Player {
         setHealth(getHealth()+ num);
     }
 
+
     private static void printStats(){
         // This prints after every turn
         System.out.println("---------------- \n" +
@@ -27,8 +29,11 @@ public abstract class Player {
 
 // GETTERS + SETTERS
     public static int getHealth() {
+
+
         return health;
     }
+
 
     public static void setHealth(int newHealth) {
         health = newHealth;
@@ -57,4 +62,6 @@ public abstract class Player {
     public static void setEquipped(String equipped) {
         Player.equipped = equipped;
     }
+
+    // come up with a mehtod that checks the health is zero or less. if true. exit game. system.exit
 }

@@ -11,10 +11,11 @@ import com.game.house.*;
 
 public class GameClass {
     public GameClass() {
-        // instantiates a new Game
+        // instantiates a new HealthBar
     }
 
     void startNewGame() throws InterruptedException {
+
         banner();
         wantInstructions();
         intro();
@@ -31,14 +32,11 @@ public class GameClass {
         ArisMarketSquare.fourthPrompt();
     }
 
-<<<<<<< HEAD
 
     // Prints opening banner
 
      //Prints opening banner
 
-=======
->>>>>>> 9d2fb68c1c658843e81d044cf3945411a2efa683
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
