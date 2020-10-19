@@ -56,8 +56,8 @@ public class Player {
         return health;
     }
 
-    public static int setHealth(int newHealth){
-        return health = newHealth;
+    public static void setHealth(int newHealth) {
+        health = newHealth;
     }
 
     public static String getCurrentLocation() {
