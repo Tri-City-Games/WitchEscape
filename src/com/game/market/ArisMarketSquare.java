@@ -1,6 +1,9 @@
 package com.game.market;
 
+import com.game.house.House;
 
+
+import com.game.player.Player;
 import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
@@ -77,7 +80,6 @@ public class ArisMarketSquare{
                         "Make a deal with the lady to obtain your horse for the escape.\n" +
                         "You must collect 3 pieces of leather to trade for the horse.");
                 System.out.println("\n");
-
                 insideShoppe();
                 break;
             case 3:
@@ -107,17 +109,36 @@ public class ArisMarketSquare{
 //can call from list using index later can code this
         if (respItemInput1 == 0) {
             System.out.println("you now have " + marketList.get(0) + " in your bag");
+            Player.addToBag(marketList.get(0));
+            Player.changeHealth(1);
+            Player.printStats();
         } else if (respItemInput1 == 1) {
             System.out.println("you now have " + marketList.get(1) + " in your bag");
+            Player.addToBag(marketList.get(1));
+            Player.changeHealth(1);
+            Player.printStats();
 //                break;
         } else if (respItemInput1 == 2) {
             System.out.println("you now have " + marketList.get(2) + " in your bag");
+            System.out.println("Your health decreases 1.");
+            Player.addToBag(marketList.get(2));
+            Player.changeHealth(-1);
+           Player.printStats();
 //                break;
         } else if (respItemInput1 == 3) {
             System.out.println("you now have " + marketList.get(3) + " in your bag");
+            Player.addToBag(marketList.get(3));
+            Player.changeHealth(0);
+            Player.printStats();
 //                break;
         } else if (respItemInput1 == 4) {
             System.out.println("you now have " + marketList.get(4) + " in your bag");
+            System.out.println("Must be your lucky day!..NOT" +
+                    "Your health decreases 1.");
+
+            Player.addToBag(marketList.get(4));
+            Player.changeHealth(-1);
+            Player.printStats();
 //                break;
         } else {
         }
@@ -140,18 +161,39 @@ public class ArisMarketSquare{
         System.out.println(respInShoppe);
 //can call from list using index later can code this
         if (respInShoppe == 5) {
-            System.out.println("you now have " + marketList.get(0) + " in your bag");
+            System.out.println("you now have " + marketList.get(5) + " in your bag");
+            System.out.println("Harry Potter flew away on his real broom." +
+                    "But you can definitely do some cleaning with broom you filthy slime!");
+            Player.addToBag(marketList.get(5));
+            Player.changeHealth(0);
+            Player.printStats();
         } else if (respInShoppe == 6) {
-            System.out.println("you now have " + marketList.get(1) + " in your bag");
+            System.out.println("you now have " + marketList.get(6) + " in your bag");
+            Player.addToBag(marketList.get(6));
+            Player.changeHealth(0);
+            Player.printStats();
 //                break;
         } else if (respInShoppe == 7) {
-            System.out.println("you now have " + marketList.get(2) + " in your bag");
+            System.out.println("you now have " + marketList.get(7) + " in your bag");
+            System.out.println("Silly rabbit, Potions are mine...Mine only!");
+            Player.addToBag(marketList.get(7));
+            Player.changeHealth(-1);
+            Player.printStats();
 //                break;
         } else if (respInShoppe == 8 ) {
-            System.out.println("you now have " + marketList.get(3) + " in your bag");
+            System.out.println("you now have " + marketList.get(8) + " in your bag");
+            System.out.println("You have no power here!");
+            Player.addToBag(marketList.get(8));
+            Player.changeHealth(-1);
+            Player.printStats();
 //                break;
         } else if (respInShoppe == 9) {
             System.out.println("you now have " + marketList.get(4) + " in your bag");
+            System.out.println("Must be your lucky day!" +
+                    "Your health increases 1.");
+            Player.addToBag(marketList.get(4));
+            Player.changeHealth(1);
+            Player.printStats();
 //                break;
         } else {
         }
@@ -200,37 +242,47 @@ public class ArisMarketSquare{
     }
 
     public static void fourthPrompt() {
-
-        System.out.println("Which area would you like to explore next? \n " +
+                System.out.println("\nWhich area would you like to explore next? \n" +
                 "Enter 1 for WichWich SandWich \n" +
                 "Enter 2 for Shoe Lady's Shoppe \n" +
                 "Enter 3 for WhichToSlay Church \n" +
-                "Enter 4 for Pier");
-//        while (true) {
+                "Enter 4 for Pier \n" + "Enter 5 for House");
+//      while (true) {
         Scanner locationInput2 = new Scanner(System.in);
-        int response3 = locationInput2.nextInt();
-//    System.out.println(response);
+        int respLocInput2 = locationInput2.nextInt();
+        System.out.println(respLocInput2);
 
-        switch (response3) {
+        switch (respLocInput2) {
             case 1:
                 System.out.println("You are now inside WichWich Sandwich Shoppe");
+                insideWichWich();
+                thirdPrompt();
                 break;
             case 2:
                 System.out.println("You are now inside Shoe Lady's Shoppe.\n" +
-                        "Have you my leather? okie dokie. Here ye horse! " +
-                        "You will give me pieces of leather to the lady and receive your horse");
+                        "'Why must tho come to my Shoppe once more.'\n" +
+                        "'Leave now! Get my leather!' \n");
+                thirdPrompt();
                 break;
             case 3:
                 System.out.println("You are now inside WhichToSlay Church. You have also been slayed.");
-                break;
+                try { Thread.sleep(1000); }
+                catch (InterruptedException ex) { Thread.currentThread().interrupt();}
+                System.out.println("GAME OVER");
+                System.exit(0);
             case 4:
-                System.out.println("You are now in the Pier");
+                System.out.println("You are now leaving Aris Market Square \n");
                 break;
+            case 5:
+                System.out.println("You are leaving the market to go back to the House");
+                House.returnFromMarket();
             default:
-                System.out.println("BRUHHHHH");
+                System.out.println("Let us try again. By 'us' we mean 'YOU'!");
+                thirdPrompt();
         }
-//        System.out.println("You now have " + marketList + " in your bag! ");
-//        }
+//        System.out.println("\nYou now have " + marketList + " in your bag! ");
+//      }
+
     }
     static void player_input() throws InterruptedException {
         //health and item inventory count

@@ -71,7 +71,7 @@ public class House {
         collectInput();
     }
 
-    public void returnFromMarket() {
+    public static void returnFromMarket() {
         System.out.println("THE HOUSE");
         System.out.println(whatsLeftInTheBox);
         System.out.println(" ");
