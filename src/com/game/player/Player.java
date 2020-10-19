@@ -3,10 +3,10 @@ package com.game.player;
 
 import java.util.ArrayList;
 
-public abstract class Player {
+public class Player {
     private static String currentLocation = "House";
     private static int health = 5;
-    private static ArrayList<String> inventory = new ArrayList<String>(5);
+    public static ArrayList<String> inventory = new ArrayList<String>();
     private static String equipped = "No item equipped";
 
     private Player() {
@@ -16,8 +16,38 @@ public abstract class Player {
         setHealth(getHealth()+ num);
     }
 
+<<<<<<< HEAD
 
     private static void printStats(){
+=======
+    public static void addToBag(String item){
+//        System.out.println("Your bag before adding item: " + inventory);
+        inventory.add(item);
+        System.out.println("Currently in your bag: " + inventory);
+    }
+
+    public static boolean threeLeather(){
+        ArrayList<String> leather = new ArrayList<>();
+        for (String item : inventory){
+            if (item.equals("leather")) {
+                leather.add(item);
+            }
+        }
+        return leather.size() >= 3;
+    }
+
+    public static void leatherCheck(){
+        if (threeLeather()){
+            System.out.println("You have collected three pieces of leather! \n" +
+                    "Return to the old woman in the market and make a trade for her horse!");
+        }
+        else {
+            System.out.println("You need to collect three pieces of leather. Keep looking!");
+        }
+    }
+
+    public static void printStats(){
+>>>>>>> 9ee2d9d237e1626675371d0852cf94e04e930f82
         // This prints after every turn
         System.out.println("---------------- \n" +
                 "Current Location: " + currentLocation + "\n" +
@@ -28,9 +58,13 @@ public abstract class Player {
     }
 
 // GETTERS + SETTERS
+<<<<<<< HEAD
     public static int getHealth() {
 
 
+=======
+    public static int getHealth(){
+>>>>>>> 9ee2d9d237e1626675371d0852cf94e04e930f82
         return health;
     }
 
@@ -45,14 +79,6 @@ public abstract class Player {
 
     public static void setCurrentLocation(String currentLocation) {
         Player.currentLocation = currentLocation;
-    }
-
-    public static ArrayList<String> getInventory() {
-        return inventory;
-    }
-
-    public static void setInventory(ArrayList<String> inventory) {
-        Player.inventory = inventory;
     }
 
     public static String getEquipped() {
