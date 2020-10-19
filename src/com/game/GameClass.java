@@ -67,7 +67,9 @@ public class GameClass {
 
         switch(resp) {
             case "Y":
-                System.out.println("Here are the instructions.");
+                System.out.println("Witch Escape is a text-based role-playing game.\n" +
+                        "Enter the prompted number or phrase on your turn. \n" +
+                        "Longer blocks of text may require you to press enter to continue.");
                 break;
             case "N":
                 break;
