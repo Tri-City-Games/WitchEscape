@@ -12,20 +12,10 @@ import com.game.pier.Pier_Gameplay;
 import com.game.house.*;
 
 public class GameClass {
-<<<<<<< HEAD:src/GameClass.java
     public GameClass() {
         // instantiates a new HealthBar
     }
-
-    void startNewGame() throws InterruptedException {
-
-=======
-    public GameClass(){
-        // instantiates a new Game
-    }
-
     public void startNewGame() throws InterruptedException {
->>>>>>> 9ee2d9d237e1626675371d0852cf94e04e930f82:src/com/game/GameClass.java
         banner();
         wantInstructions();
         intro();
@@ -40,15 +30,7 @@ public class GameClass {
         ArisMarketSquare.fourthPrompt();
     }
 
-<<<<<<< HEAD:src/GameClass.java
-
     // Prints opening banner
-
-     //Prints opening banner
-
-=======
-    // Prints opening banner
->>>>>>> 9ee2d9d237e1626675371d0852cf94e04e930f82:src/com/game/GameClass.java
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
