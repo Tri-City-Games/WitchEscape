@@ -1,6 +1,7 @@
 package com.game.pier;
 
-import com.market.ArisMarketSquare;
+import com.game.market.ArisMarketSquare;
+
 
 import java.util.Scanner;
 
