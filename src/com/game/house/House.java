@@ -72,6 +72,8 @@ public class House {
     }
 
     public static void returnFromMarket() {
+        Player.setCurrentLocation("House");
+        System.out.println(" ");
         System.out.println("THE HOUSE");
         System.out.println(whatsLeftInTheBox);
         System.out.println(" ");
@@ -139,10 +141,12 @@ public class House {
                 System.exit(0);
             case 2:
                 System.out.println(op8);
+                tradeHorse();
                 break;
             case 3:
                 System.out.println(op9);
                 Player.addToBag("leather");
+                Player.printStats();
                 collectReturnInput();
                 break;
             case 4:
@@ -155,4 +159,21 @@ public class House {
                 break;
             }
         }
+
+        private static void tradeHorse(){
+            if (Player.threeLeather()){
+                System.out.println(" ");
+                System.out.println("MARKET");
+                System.out.println("You find the old lady and trade her leather for the horse.\n" +
+                        "You hop on the horse and ride off into the forest, escaping safely.\n" +
+                        "YOU WON.");
+                System.exit(0);
+            } else {
+                System.out.println("You took too long. The villagers drag you out of your house\n" +
+                        "and put you and your mother on pikes outside their town.\n" +
+                        "GAME OVER.");
+                System.exit(0);
+            }
+        }
+
 }

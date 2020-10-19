@@ -52,6 +52,7 @@ public class ArisMarketSquare{
     private static ArrayList<String> marketList = new ArrayList<String>(Arrays.asList("Pumpkin Spice Latte", "Leather", "Zombie Tooth", "Barret .50cal",  "lucky Penny", "Harry Potter's Broom", "Witch's Hat", "Magic Potion", "Spell Book"));
 
     public static void myMarket() throws InterruptedException {
+        Player.setCurrentLocation("Market");
         firstPrompt();
  //      insideWichWich();
    //     insideShoppe();

@@ -23,16 +23,16 @@ public class Pier {
                     //System.out.println(count);
                     break;
                 case"white ship":
-                    //System.out.println(count);
-                    count++;
                     boat_3();
+                    count++;
+                    //System.out.println(count);
                     break;
                 default:
                     System.out.println("Please pick a ship to explore.");
                     ship_picker();
                     break;
             }
-                    //break ships;
+            //break ships;
             if (count == 3) {
                 break ships;
             }
