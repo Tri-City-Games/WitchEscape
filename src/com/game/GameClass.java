@@ -1,3 +1,5 @@
+package com.game;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,14 +16,12 @@ public class GameClass {
         // instantiates a new Game
     }
 
-    void startNewGame() throws InterruptedException {
+    public void startNewGame() throws InterruptedException {
         banner();
         wantInstructions();
         intro();
-        System.out.println("Before House, your health is: " + Player.getHealth());
         // run Amanda's code
         House.play();
-        System.out.println("After House, your health is: " + Player.getHealth());
 
         // run Sohail's code
         ArisMarketSquare.myMarket();
