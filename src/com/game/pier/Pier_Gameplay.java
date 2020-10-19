@@ -15,7 +15,7 @@ public class Pier_Gameplay {
 
     static void player_input() throws InterruptedException {
         //health and item inventory count
-        String[] directions = {"You look around, you see the pier and a group of sailors.",
+        String[] directions = {"You look around, you see the Ships on the pier and a group of sailors.",
                 "You see ships and wooden crates on the pier and the ale house down the boardwalk.",
                 "You're back on the pier, you see grain bags and ale kegs.",
                 "Still on the pier, you see the forest that heads back to the Market.",

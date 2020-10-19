@@ -27,7 +27,7 @@ public class GameClass {
 
         // run Laura's code
         Pier_Gameplay.run_pier();
-        //ArisMarketSquare.fourthPrompt();
+        ArisMarketSquare.fourthPrompt();
     }
 
      //Prints opening banner
