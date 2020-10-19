@@ -27,10 +27,17 @@ public class GameClass {
 
         // run Laura's code
         Pier_Gameplay.run_pier();
-        ArisMarketSquare.fourthPrompt();
+        //ArisMarketSquare.fourthPrompt();
     }
 
     // Prints opening banner
+
+
+    // Prints opening banner
+
+     //Prints opening banner
+
+
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
