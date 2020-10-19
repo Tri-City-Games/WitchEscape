@@ -20,13 +20,13 @@ public class Player {
         public static void addToBag (String item){
 //        System.out.println("Your bag before adding item: " + inventory);
             inventory.add(item);
-            System.out.println("Currently in your bag: " + inventory);
+//            System.out.println("Currently in your bag: " + inventory);
         }
 
         public static boolean threeLeather () {
             ArrayList<String> leather = new ArrayList<>();
             for (String item : inventory) {
-                if (item.equals("leather")) {
+                if (item.toLowerCase().equals("leather")) {
                     leather.add(item);
                 }
             }

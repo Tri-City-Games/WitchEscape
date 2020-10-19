@@ -108,32 +108,32 @@ public class ArisMarketSquare{
         System.out.println(respItemInput1);
 //can call from list using index later can code this
         if (respItemInput1 == 0) {
-            System.out.println("you now have " + marketList.get(0) + " in your bag");
+//            System.out.println("you now have " + marketList.get(0) + " in your bag");
             Player.addToBag(marketList.get(0));
             Player.changeHealth(1);
             Player.printStats();
         } else if (respItemInput1 == 1) {
-            System.out.println("you now have " + marketList.get(1) + " in your bag");
+//            System.out.println("you now have " + marketList.get(1) + " in your bag");
             Player.addToBag(marketList.get(1));
             Player.changeHealth(1);
             Player.printStats();
 //                break;
         } else if (respItemInput1 == 2) {
-            System.out.println("you now have " + marketList.get(2) + " in your bag");
+//            System.out.println("you now have " + marketList.get(2) + " in your bag");
             System.out.println("Your health decreases 1.");
             Player.addToBag(marketList.get(2));
             Player.changeHealth(-1);
            Player.printStats();
 //                break;
         } else if (respItemInput1 == 3) {
-            System.out.println("you now have " + marketList.get(3) + " in your bag");
+//            System.out.println("you now have " + marketList.get(3) + " in your bag");
             Player.addToBag(marketList.get(3));
             Player.changeHealth(0);
             Player.printStats();
 //                break;
         } else if (respItemInput1 == 4) {
-            System.out.println("you now have " + marketList.get(4) + " in your bag");
-            System.out.println("Must be your lucky day!..NOT" +
+//            System.out.println("you now have " + marketList.get(4) + " in your bag");
+            System.out.println("Must be your lucky day!..NOT \n" +
                     "Your health decreases 1.");
 
             Player.addToBag(marketList.get(4));
@@ -161,34 +161,34 @@ public class ArisMarketSquare{
         System.out.println(respInShoppe);
 //can call from list using index later can code this
         if (respInShoppe == 5) {
-            System.out.println("you now have " + marketList.get(5) + " in your bag");
+//            System.out.println("you now have " + marketList.get(5) + " in your bag");
             System.out.println("Harry Potter flew away on his real broom." +
                     "But you can definitely do some cleaning with broom you filthy slime!");
             Player.addToBag(marketList.get(5));
             Player.changeHealth(0);
             Player.printStats();
         } else if (respInShoppe == 6) {
-            System.out.println("you now have " + marketList.get(6) + " in your bag");
+//            System.out.println("you now have " + marketList.get(6) + " in your bag");
             Player.addToBag(marketList.get(6));
             Player.changeHealth(0);
             Player.printStats();
 //                break;
         } else if (respInShoppe == 7) {
-            System.out.println("you now have " + marketList.get(7) + " in your bag");
+//            System.out.println("you now have " + marketList.get(7) + " in your bag");
             System.out.println("Silly rabbit, Potions are mine...Mine only!");
             Player.addToBag(marketList.get(7));
             Player.changeHealth(-1);
             Player.printStats();
 //                break;
         } else if (respInShoppe == 8 ) {
-            System.out.println("you now have " + marketList.get(8) + " in your bag");
+//            System.out.println("you now have " + marketList.get(8) + " in your bag");
             System.out.println("You have no power here!");
             Player.addToBag(marketList.get(8));
             Player.changeHealth(-1);
             Player.printStats();
 //                break;
         } else if (respInShoppe == 9) {
-            System.out.println("you now have " + marketList.get(4) + " in your bag");
+//            System.out.println("you now have " + marketList.get(4) + " in your bag");
             System.out.println("Must be your lucky day!" +
                     "Your health increases 1.");
             Player.addToBag(marketList.get(4));
@@ -284,46 +284,46 @@ public class ArisMarketSquare{
 //      }
 
     }
-    static void player_input() throws InterruptedException {
-        //health and item inventory count
-        loop: while(true) {
-            Scanner direction_choice = new Scanner(System.in);  // Create a Scanner object
-            System.out.println("Where would you like to go?");
-
-            String choice = direction_choice.nextLine();  // Read user input
-            //System.out.println(choice);
-
-            //DISPLAY PARAMETER PROMPT HERE
-            switch (choice) {
-                case "sailor group":
-                    System.out.println("You arrive at " + choice);
-                    break;
-                case "ale house":
-                    System.out.println("You arrive at " + choice);
-
-                    break;
-                case "pier":
-                    System.out.println("You arrive at " + choice);
-
-                    break;
-                case "wooden crates":
-                    System.out.println("You arrive at " + choice);
-
-                    break;
-                case "ale kegs":
-                    System.out.println("You arrive at " + choice);
-
-                    break;
-                case "grain bags":
-                    System.out.println("You arrive at " + choice);
-                    break;
-                default:
-                    System.out.println("Sorry! You can't go there.");
-                    player_input(); //REMOVING PLAYERINPUT() AND BREAK
-                    break loop; //add to end of switch
-            }
-        }
-    }
+//    static void player_input() throws InterruptedException {
+//        //health and item inventory count
+//        loop: while(true) {
+//            Scanner direction_choice = new Scanner(System.in);  // Create a Scanner object
+//            System.out.println("Where would you like to go?");
+//
+//            String choice = direction_choice.nextLine();  // Read user input
+//            //System.out.println(choice);
+//
+//            //DISPLAY PARAMETER PROMPT HERE
+//            switch (choice) {
+//                case "sailor group":
+//                    System.out.println("You arrive at " + choice);
+//                    break;
+//                case "ale house":
+//                    System.out.println("You arrive at " + choice);
+//
+//                    break;
+//                case "pier":
+//                    System.out.println("You arrive at " + choice);
+//
+//                    break;
+//                case "wooden crates":
+//                    System.out.println("You arrive at " + choice);
+//
+//                    break;
+//                case "ale kegs":
+//                    System.out.println("You arrive at " + choice);
+//
+//                    break;
+//                case "grain bags":
+//                    System.out.println("You arrive at " + choice);
+//                    break;
+//                default:
+//                    System.out.println("Sorry! You can't go there.");
+//                    player_input(); //REMOVING PLAYERINPUT() AND BREAK
+//                    break loop; //add to end of switch
+//            }
+//        }
+//    }
 }
 
 

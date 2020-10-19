@@ -18,26 +18,19 @@ public class GameClass {
     public void startNewGame() throws InterruptedException {
         banner();
         wantInstructions();
-        //intro();
+        intro();
         // run Amanda's code
-        //House.play();
+        House.play();
 
         // run Sohail's code
-        //ArisMarketSquare.myMarket();
+        ArisMarketSquare.myMarket();
 
         // run Laura's code
         Pier_Gameplay.run_pier();
         //ArisMarketSquare.fourthPrompt();
     }
 
-    // Prints opening banner
-
-
-    // Prints opening banner
-
      //Prints opening banner
-
-
     private static void banner(){
         Thread thd = new Thread();
         File file = new File("src/Banner.txt");
@@ -67,9 +60,12 @@ public class GameClass {
 
         switch(resp) {
             case "Y":
-                System.out.println("Witch Escape is a text-based role-playing game.\n" +
+                System.out.println(" \n" +
+                        "INSTRUCTIONS \n" +
+                        "Witch Escape is a text-based role-playing game.\n" +
                         "Enter the prompted number or phrase on your turn. \n" +
-                        "Longer blocks of text may require you to press enter to continue.");
+                        "Longer blocks of text may require you to press enter to continue.\n" +
+                        " ");
                 break;
             case "N":
                 break;
@@ -82,9 +78,11 @@ public class GameClass {
     private static void intro(){
         // Add typewriter effect to this later. See notes
         // The following text needs to be moved to XML once we get it working.
-        System.out.println("   In the year 1692, during the Salem Witch trials, another heretical entity comes into being: the Undead. \n" +
+        System.out.println("INTRODUCTION \n" +
+                "   In the year 1692, during the Salem Witch trials, another heretical entity comes into being: the Undead. \n" +
                 "You are a young witch trying to leave your village in order to escape from the Puritans \n" +
                 "who have hanged or burned other suspected witches in town. Leaving the village has become more complicated \n" +
-                "now that you have to avoid not only the townsfolk, but also...ZOMBIES.");
+                "now that you have to avoid not only the townsfolk, but also...ZOMBIES.\n" +
+                " ");
     }
 }
