@@ -33,7 +33,7 @@ public class GameClass {
         ArisMarketSquare.myMarket();
         // run Laura's code
         Pier_Gameplay.run_pier();
-        ArisMarketSquare.fourthPrompt();
+        //ArisMarketSquare.fourthPrompt();
     }
 
 
