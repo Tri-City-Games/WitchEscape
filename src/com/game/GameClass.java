@@ -18,12 +18,12 @@ public class GameClass {
     public void startNewGame() throws InterruptedException {
         banner();
         wantInstructions();
-        intro();
+        //intro();
         // run Amanda's code
-        House.play();
+        //House.play();
 
         // run Sohail's code
-        ArisMarketSquare.myMarket();
+        //ArisMarketSquare.myMarket();
 
         // run Laura's code
         Pier_Gameplay.run_pier();
@@ -67,7 +67,9 @@ public class GameClass {
 
         switch(resp) {
             case "Y":
-                System.out.println("Here are the instructions.");
+                System.out.println("Witch Escape is a text-based role-playing game.\n" +
+                        "Enter the prompted number or phrase on your turn. \n" +
+                        "Longer blocks of text may require you to press enter to continue.");
                 break;
             case "N":
                 break;

@@ -53,10 +53,14 @@ public class Player {
         }
 
 // GETTERS + SETTERS
-            public static int getHealth () {
-                return health;          }
+            public static int getHealth () { return health;}
             public static void setHealth ( int newHealth){
-                health = newHealth;         }
+                if (newHealth <= 0){
+                    System.out.println("That last blow was fatal. You fall to the ground and die a terrible death.");
+                    System.out.println("GAME OVER");
+                    System.exit(0);
+                } else { health = newHealth;}
+            }
 
             public static String getCurrentLocation () {
                 return currentLocation;         }
