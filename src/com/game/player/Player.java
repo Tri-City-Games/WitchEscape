@@ -20,13 +20,13 @@ public class Player {
         public static void addToBag (String item){
 //        System.out.println("Your bag before adding item: " + inventory);
             inventory.add(item);
-            System.out.println("Currently in your bag: " + inventory);
+//            System.out.println("Currently in your bag: " + inventory);
         }
 
         public static boolean threeLeather () {
             ArrayList<String> leather = new ArrayList<>();
             for (String item : inventory) {
-                if (item.equals("leather")) {
+                if (item.toLowerCase().equals("leather")) {
                     leather.add(item);
                 }
             }
@@ -53,10 +53,14 @@ public class Player {
         }
 
 // GETTERS + SETTERS
-            public static int getHealth () {
-                return health;          }
+            public static int getHealth () { return health;}
             public static void setHealth ( int newHealth){
-                health = newHealth;         }
+                if (newHealth <= 0){
+                    System.out.println("That last blow was fatal. You fall to the ground and die a terrible death.");
+                    System.out.println("GAME OVER");
+                    System.exit(0);
+                } else { health = newHealth;}
+            }
 
             public static String getCurrentLocation () {
                 return currentLocation;         }
