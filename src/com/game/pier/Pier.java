@@ -50,7 +50,7 @@ public class Pier {
         System.out.println("Hey! You! Get outta here!");
         input.nextLine();
         System.out.println("You're startled as a Sailor appears and rushes you off the ship back on to the pier.");
-
+        input.nextLine();
     }
     //Boat 2()-Zombie attack
         static void boat_2(){
@@ -60,12 +60,14 @@ public class Pier {
             System.out.println("You look around, coast is clear. You board the ship, creep around the dock when suddenly...");
             input.nextLine();
             System.out.println("ZOMBIES ATTACK!");
+            input.nextLine();
             //need to flesh this out further-add health and equipped items
             // you either live or die here.
             if (Player.getEquipped().equals("No item equipped")) {
-                Player.changeHealth(-1);
-                Player.printStats();
+                System.out.println("You have no weapon equipped! You died! :( ");
+                System.exit(0);
             } else {
+                Player.printStats();
                 System.out.println("You survived the attack!");
             }
         }
@@ -89,6 +91,7 @@ public class Pier {
                 Player.printStats();
                 input.nextLine();
         System.out.println("You run out of the laundry, off the ship's ramp and back onto the pier");
+                input.nextLine();
     }
 
     //Wooden Crate()
@@ -98,6 +101,7 @@ public class Pier {
         System.out.println("You see some wooden crates filled with exotic looking fresh fruit.");
         input.nextLine();
         System.out.println("You push around the fruit looking for a leather scrap-you find nothing.");
+        input.nextLine();
     }
     //Grain Bags()
     static void grain_bags() {
@@ -106,6 +110,7 @@ public class Pier {
         System.out.println("You see some large thick linen grain bags, you untie them hoping you can use the leather wrapping.");
         input.nextLine();
         System.out.println("The leather wrapping comes away and doesn't seem to be enough to give to the lady in the market.");
+        input.nextLine();
     }
 
     //Ale Kegs()
@@ -121,7 +126,9 @@ public class Pier {
         System.out.println("You try to pop off the lid of the second keg-it pops off!");
         //equip function here add to inventory/weapons
         Player.setEquipped("Keg Top Shield");
+        input.nextLine();
         Player.printStats();
+        input.nextLine();
     }
 
 }

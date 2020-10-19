@@ -13,70 +13,74 @@ import static com.game.pier.Pier.*;
 
 public class Pier_Gameplay {
 
-     static void player_input() throws InterruptedException {
+    static void player_input() throws InterruptedException {
         //health and item inventory count
-         loop: while(true) {
-             Scanner direction_choice = new Scanner(System.in);  // Create a Scanner object
-             System.out.println("Where would you like to go?");
+        String[] directions = {"You look around, you see the pier and a group of sailors.",
+                "You see ships and wooden crates on the pier and the ale house down the boardwalk.",
+                "You're back on the pier, you see grain bags and ale kegs.",
+                "Still on the pier, you see the forest that heads back to the Market.",
+                "You survive, get the piece of leather and head back toward the Market."};
+        loop:
+        while (true) {
+            Scanner direction_choice = new Scanner(System.in);  // Create a Scanner object
 
-             String choice = direction_choice.nextLine();  // Read user input
-             //System.out.println(choice);
+            System.out.println("Where would you like to go?");
 
-             //DISPLAY PARAMETER PROMPT HERE
-             switch (choice) {
-                 case "sailor group":
-                     //System.out.println("You arrive at " + choice);
-                     sailor_group();
-                     break;
-                 case "ale house":
-                     //System.out.println("You arrive at " + choice);
-                     ale_House();
-                     break;
-                 case "pier":
-                     //System.out.println("You arrive at " + choice);
-                     ship_picker();
-                     break;
-                 case "wooden crates":
-                     //System.out.println("You arrive at " + choice);
-                     wooden_crate();
-                     break;
-                 case "ale kegs":
-                     //System.out.println("You arrive at " + choice);
-                     ale_kegs();
-                     break;
-                 case "grain bags":
-                     //System.out.println("You arrive at " + choice);
-                     grain_bags();
-                     break;
-                 case "to market":
-                     ArisMarketSquare.fourthPrompt();
-                     break;
-                 default:
-                     System.out.println("Sorry! You can't go there.");
-                     player_input(); //REMOVING PLAYERINPUT() AND BREAK
-                     break loop; //add to end of switch
-             }
-         }
+            String choice = direction_choice.nextLine();  // Read user input
+            //System.out.println(choice);
+
+            //DISPLAY PARAMETER PROMPT HERE
+            switch (choice) {
+                case "sailor group":
+                    //System.out.println("You arrive at " + choice);
+                    sailor_group();
+                    System.out.println(directions[1]);
+                    break;
+                case "ale house":
+                    //System.out.println("You arrive at " + choice);
+                    ale_House();
+                    System.out.println(directions[0]);
+                    break;
+                case "ships":
+                    //System.out.println("You arrive at " + choice);
+                    ship_picker();
+                    System.out.println(directions[2]);
+                    break;
+                case "wooden crates":
+                    //System.out.println("You arrive at " + choice);
+                    wooden_crate();
+                    random_gossip();
+                    System.out.println(directions[3]);
+                    break;
+                case "ale kegs":
+                    //System.out.println("You arrive at " + choice);
+                    ale_kegs();
+                    System.out.println(directions[3]);
+                    break;
+                case "grain bags":
+                    //System.out.println("You arrive at " + choice);
+                    grain_bags();
+                    random_gossip();
+                    System.out.println(directions[3]);
+                    break;
+                case "to market":
+                    System.out.println(directions[4]);
+                    ArisMarketSquare.fourthPrompt();
+                    break;
+                default:
+                    System.out.println("Sorry! You can't go there.");
+                    player_input(); //REMOVING PLAYERINPUT() AND BREAK
+                    break loop; //add to end of switch
+            }
+        }
     }
 
     public static void run_pier() throws InterruptedException {
         System.out.println("You emerge from the Market. You're standing on the boardwalk near the sea and you see a group of Sailors and further down an Ale House.");
         Player.setCurrentLocation("Boardwalk/Pier");
         player_input();
-        random_gossip();
-        System.out.println("You leave and look around, you see the pier and a group of sailors."); //need to add a way to remove locations here
-        player_input();
-        System.out.println("You turn around, you see the pier and three ships.");
-        player_input();
-        System.out.println("You're back on the pier, you see some wooden crates and grain bags.");
-        player_input();
-        random_gossip();
-        System.out.println("Still on the pier, last place to look is some ale kegs.");
-        player_input();
-        Thread.sleep(4000);
-        System.out.println("You survive, get the piece of leather and head back toward the Market.");
     }
-    }
+}
 
 
 //add while loop for health (while health >0..)

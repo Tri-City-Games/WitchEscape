@@ -19,6 +19,7 @@ public class Boardwalk {
         townspeople_gossip = gossip [rand.nextInt(gossip.length)];
 
         System.out.println(townspeople_gossip);
+        input.nextLine();
     }
 
     //encounter with sailor group
@@ -37,6 +38,7 @@ public class Boardwalk {
         input.nextLine();
         System.out.println(sailor[2]);
         System.out.println("You turn around and leave the group.");
+        input.nextLine();
     }
 
     //encounter at Ale House
@@ -57,6 +59,7 @@ public class Boardwalk {
         System.out.println("The waitress says to you, 'Child, you best be going. \n It's late and it's not safe to be who you are on this side of town.");
         input.nextLine();
         System.out.println("You snap out of it, turn and leave. \n You head toward the pier, still looking for that piece of leather.");
+        input.nextLine();
     }
 
     //Zombie Attack()?
