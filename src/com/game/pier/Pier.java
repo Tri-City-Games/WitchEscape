@@ -1,5 +1,7 @@
 package com.game.pier;
 
+import com.game.player.Player;
+
 import java.util.*;
 
 public class Pier {
@@ -46,8 +48,15 @@ public class Pier {
             input.nextLine();
             System.out.println("You look around, coast is clear. You board the ship, creep around the dock when suddenly...");
             input.nextLine();
-            System.out.println("ZOMBIES ATTACK!"); //need to flesh this out further-add health and equipped items
-            //you either live or die here.
+            System.out.println("ZOMBIES ATTACK!");
+            //need to flesh this out further-add health and equipped items
+            // you either live or die here.
+            if (Player.getEquipped().equals("No item equipped")) {
+                Player.changeHealth(-1);
+                Player.printStats();
+            } else {
+                System.out.println("You survived the attack!");
+            }
         }
     //Boat 3()-Leather found
             static void boat_3() {
@@ -65,6 +74,8 @@ public class Pier {
                 input.nextLine();
         System.out.println("You pull the belt off the pants and place it inside your bag.");
         //add belt to inventory here
+                Player.addToBag("leather");
+                Player.printStats();
                 input.nextLine();
         System.out.println("You run out of the laundry, off the ship's ramp and back onto the pier");
     }
@@ -98,6 +109,8 @@ public class Pier {
         input.nextLine();
         System.out.println("You try to pop off the lid of the second keg-it pops off!");
         //equip function here add to inventory/weapons
+        Player.setEquipped("Keg Top Shield");
+        Player.printStats();
     }
 
 }
